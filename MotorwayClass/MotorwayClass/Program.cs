@@ -10,8 +10,18 @@ namespace MotorwayClass
     {
         static void Main(string[] args)
         {
+            // Created four different Constructors and called all four Constructors 
             var motorway1 = new Motorway("Motorway 1", "Highway", 'S', "Asphalt", 3, false, "Maintenance company");
+            Console.WriteLine(motorway1 + "\n");
 
+            var motorway2 = new Motorway("Motorway 2", true);
+            Console.WriteLine(motorway2 + "\n");
+
+            var motorway3 = new Motorway("Motorway 3");
+            Console.WriteLine(motorway3 + "\n");
+
+            var motorway4 = new Motorway("Motorway 4", 2);
+            Console.WriteLine(motorway4 + "\n");
         }
     }
 }
