@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MotorwayClass
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            // Created four different Constructors and called all four Constructors 
+            // Created four different Constructors and called all four Constructors
             var motorway1 = new Motorway("Motorway 1", "Highway", 'S', "Asphalt", 3, false, "Maintenance company");
             Console.WriteLine(motorway1 + "\n");
 
