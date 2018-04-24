@@ -10,6 +10,8 @@ namespace MotorwayClass
     {
         static void Main(string[] args)
         {
+            var motorway1 = new Motorway("Motorway 1", "Highway", 'S', "Asphalt", 3, false, "Maintenance company");
+
         }
     }
 }

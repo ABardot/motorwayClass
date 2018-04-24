@@ -23,6 +23,18 @@ namespace MotorwayClass
             // Default
         }
 
+        // Complete constructor
+        public Motorway(string name, string type, char direction, string surface, int numberOfLanes, bool toll, string maintainance)
+        {
+            Name = name;
+            MotorwayType = type;
+            Direction = direction;
+            Surface = surface;
+            NumberOfLanes = numberOfLanes;
+            Toll = toll;
+            Maintainance = maintainance;
+        }
+
         public Motorway(string name)
         {
             Name = name;
@@ -32,6 +44,26 @@ namespace MotorwayClass
         {
             Name = name;
             Toll = toll;
+        }
+
+        public Motorway(string name, int numberOfLanes)
+        {
+            Name = name;
+            NumberOfLanes = numberOfLanes;
+        }
+
+       
+
+        public override string ToString()
+        {
+            return $"Motorway Name: {Name}\n" + 
+                   $"Motorway Type: {MotorwayType}\n" +
+                   $"Direction: {Direction}\n" +
+                   $"Surface: {Surface}\n" +
+                   $"Number of Lanes: {NumberOfLanes}\n" +
+                   $"Toll: {Toll}\n" +
+                   $"Maintenance: {Maintainance}\n";
+        
         }
     }
 }
