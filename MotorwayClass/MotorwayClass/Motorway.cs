@@ -17,12 +17,12 @@
         // Properties
         public string Name { get; set; }
 
-        public string MotorwayType { get; set; }
+        public string MotorwayType { get; set; } = "NA";
         public char Direction { get; set; }
-        public string Surface { get; set; }
+        public string Surface { get; set; } = "NA";
         public int? NumberOfLanes { get; set; }
         public bool? Toll { get; set; } // Made null in order to supply values called.
-        public string Maintainance { get; set; }
+        public string Maintainance { get; set; } = "NA";
 
         // Constructors
         public Motorway()
@@ -92,14 +92,26 @@
             }
         }
 
+        private string HowManyLanes()
+        {
+            if (NumberOfLanes == null)
+            {
+                return "NA";
+            }
+            else
+            {
+                return NumberOfLanes.ToString();
+            }
+        }
+
         public override string ToString()
         {
             return $"Motorway Name: {Name}\n" +
                    $"Motorway Type: {MotorwayType}\n" +
-                   $"Direction: {Direction}\n" +
+                   $"Direction: {GetDirections()}\n" +
                    $"Surface: {Surface}\n" +
                    $"Number of Lanes: {NumberOfLanes}\n" +
-                   $"Toll: {Toll}\n" +
+                   $"Toll: {IsMotorWayToll()}\n" +
                    $"Maintenance: {Maintainance}\n";
         }
     }
